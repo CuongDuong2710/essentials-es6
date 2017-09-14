@@ -18,4 +18,12 @@ console.log(b); */
 function print(...z) {
   console.log(z)
 }
-print(1, 2, 3, 4, 5, 6)
+//print(1, 2, 3, 4, 5, 6)
+
+// practice
+function butter(...z) {
+  let a = [1, 2, 3, ...z];
+  console.log(a);
+}
+  
+butter(4, 5, 6);
