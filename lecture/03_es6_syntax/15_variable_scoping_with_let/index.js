@@ -12,7 +12,6 @@ console.log(a)
 // so the scope is protecting variable 'salary' for anything want to use it
 // private information
 {
-  
   let salary = 9000
 }
 
