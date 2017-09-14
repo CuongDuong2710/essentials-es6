@@ -1,1 +1,1 @@
-console.log('Hello world! updating webpack')
+console.log('Hello world! updating from webpack')

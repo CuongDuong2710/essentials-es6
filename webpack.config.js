@@ -6,7 +6,6 @@ module.exports = {
   output: { // build output
     path: path.resolve(__dirname, '/build'),
     filename: 'bundle.js',
-    publicPath: '/public/'
   },
   module: {
     loaders: [ // loading to accomplish the transformation from ES6 to Javascript code

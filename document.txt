@@ -89,6 +89,13 @@ npm install babel-core babel-loader webpack-dev-server babel-preset-es2015 babel
 // Not updating live code
 https://github.com/webpack/webpack-dev-server/issues/155
 
+// Fix => remove 'publicPath'
+https://stackoverflow.com/questions/36039146/webpack-dev-server-compiles-files-but-does-not-refresh-or-make-compiled-javascri
+// Public path refers to the location from the _browser's_ perspective, so 
+// `/public' would be referring to `mydomain.com/public/` instead of just
+// `mydomain.com`.
+The "publicPath" option is the most confusing part for dev server. Rules of thumb: if you did not set "publicPath" in the "output" block(webpack config), do not set the "publicPath" option in for your dev server – Alan Oct 4 '16 at 12:24 
+
 
 npm uninstall webpack --save-dev
 npm install webpack@3.5.6 --save-dev
@@ -100,5 +107,33 @@ YError: Too many arguments provided. Expected max 2 but received 3.
 => version webpack
 
 // Error: Invalid configuration object. webpack-dev-server has been initialised using a configuration object that does not match the API schema.
+
+*** NOTE
+Break: Babel and Webpack
+Section 2, Lecture 13
+
+Babel and Webpack
+
+Here comes the first optional break. Stick around for an overview of what we just learned if you’d like. Or just catch the quality humor that finishes this thing off!
+
+We just spent some time setting up babel and webpack so that we can code in es6. We also set up our configuration file for webpack and prepared a project that transforms es6 code into JavaScript. The details of these configuration files really matter, so here’s another link to the github repo for this course (https://github.com/15Dkatz/es6-tutorial). Feel free to use this repo as a starting point for any es6 project you do in the future!
+
+Also, before we get to some actual coding, let’s overview the main points of babel and webpack.
+
+    A transpiler reads code written in one language and produces the equivalent code in another.
+
+    We need transpilers so that our pretty es6 code compiles into the dense JavaScript code that browser like. Babel is one of the most popular es6 transpilers.
+
+    Using webpack allows us to create an environment that transforms es6 code with babel.
+
+        It combines multiple modules into one js file to reduce errors and resources on the client-side.
+
+        Shipping with a development server, it gives us live code updating for free!
+
+Overall, we JavaScript developers have to appreciate awesome libraries like these. I mean, I could just babel on and on about these great features.
+
+And if you enjoyed that one, don’t worry, I webpacked plenty more jokes to come :)
+
+
 
 
