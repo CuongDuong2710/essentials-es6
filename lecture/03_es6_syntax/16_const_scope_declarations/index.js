@@ -7,5 +7,3 @@ array.push(4)
 console.log(array)
 
 array = [1] // error: "array" is read-only
-
-
