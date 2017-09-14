@@ -1,0 +1,81 @@
+node -v
+npm -v
+mkdir es6
+cd es6
+
+*** INSTALL // Create package.json
+npm init -y
+Wrote to Z:\es6\package.json:
+
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.5.6"
+  }
+}
+
+*** INSTALL // Create a node modules folder for our node project and update package.json with "devDependencies"
+npm install --save-dev webpack
+
+// Run
+npm run build
+
+// Error 1
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.output.path: The provided value "./build" is not an absolute path!
+ 
+// Fix: path: __dirname + './build'
+
+module.exports = {
+  entry: ['./app/index.js'],
+  output: {
+    path: __dirname + './build',
+    filename: 'bundle.js'      
+  }
+}
+=> run but not generate file 'bundle.js'
+
+// Error 2
+path: path.join(__dirname, '/build'),
+ReferenceError: path is not defined
+
+// Fix
+var path = require('path'); // <- adding
+
+module.exports = {
+  entry: ['./app/index.js'],
+  output: {
+    path: path.join(__dirname, '/build'), // <- adding
+    filename: 'bundle.js',
+    publicPath: '/public/'
+  }
+}
+
+============================================
+Q&A
+what is their in bundle.js?
+Sopan · Lecture 10 · 23 days ago
+
+what is all the code written in that file, and for what it is used for
+David Katz
+David — Instructor
+· 22 days ago
+
+The code in that file is the transpiled version of ES6 code. Browsers don't natively support es6 code in the moment, just older ES5 JavaScript syntax.
+ So the ES6 code gets translated into ES5 code and placed into the bundle.js file. That way, you can write the nicer ES6 code but still have it work on ES5 browsers.
+ 
+ 
+============================================
+Lecture 11 - Webpack-ing Babel
+
+*** INSTALL
+npm install babel-core babel-loader webpack-dev-server babel-preset-es2015 babel-polyfill --save-dev
