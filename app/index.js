@@ -1,11 +1,10 @@
-// 'const' value cannot be re-assigned
-const b = 3
-b = 3*4; // 'b' is read-only
+var a = 'hello'
+var b = 'world'
+var c = a + ' ' + b
+//console.log(c)
 
-const array = [1, 2, 3]
-array.push(4)
-console.log(array)
+let d = `hello ${b}`
+// console.log(d)
 
-array = [1] // error: "array" is read-only
-
-
+let e = `${a} world`
+console.log(e)
