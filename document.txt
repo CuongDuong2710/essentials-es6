@@ -75,7 +75,30 @@ The code in that file is the transpiled version of ES6 code. Browsers don't nati
  
  
 ============================================
-Lecture 11 - Webpack-ing Babel
+Lecture 12 - Webpack-ing Babel
 
 *** INSTALL
 npm install babel-core babel-loader webpack-dev-server babel-preset-es2015 babel-polyfill --save-dev
+
+// 'core' is a main module which holds much of the logic for transforming ES6 to JavaScript code.
+// 'loader' is the module that accomplishes the transformation.
+// 'webpack-dev-server' allow us to have automatically life code updates.
+// ' babel-preset-es2015' allow us to specify as a preset for webpack that we're converting as 2015
+// 'babel-polyfill' is a piece of code that provide a task that we as developers expect the system to provide natively.
+
+// Not updating live code
+https://github.com/webpack/webpack-dev-server/issues/155
+
+
+npm uninstall webpack --save-dev
+npm install webpack@3.5.6 --save-dev
+npm install -g npm@latest
+
+// Error
+Z:\es6>webpack-dev-server --output-public-path=/build/
+YError: Too many arguments provided. Expected max 2 but received 3.
+=> version webpack
+
+// Error: Invalid configuration object. webpack-dev-server has been initialised using a configuration object that does not match the API schema.
+
+
