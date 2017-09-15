@@ -18,7 +18,7 @@
 
 // part 4
 const blastoff = () => {
-  console.log('3...2...1... blastoff!')
-}
-
+    console.log('3...2...1... blastoff!')
+  }
 blastoff()
+  
