@@ -189,11 +189,15 @@ Why, that’s a …spread operator.
 
 
 ============================================
-Lecture 24
+Lecture 24 - Arrow functions ignoring This
 
 This 'preset' automatically enable something called strict mode on the browser.
 Strict mode allow just throw more code errors that might not be able to be supported on every single browser.
 
+============================================
+Lecture 25 - Helping with the Map function
+
+The 'map' function ES6 allows us to create arrays by calling function on each element in the array.
 
 
 
