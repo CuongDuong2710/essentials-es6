@@ -1,24 +1,39 @@
+// remove 'babel->preset->es2015 in package.json
+// global all pars
+this.a = 25
+
 // part 1
-// function blastoff() {
-//   console.log('3...2...1... blastoff!')
+// A print function creates its own (this.a) as seperate from the global base around.
+// let print = function() {
+//   console.log('this.a', this.a)
 // }
 
-// blastoff()
+// print() // Uncaught TypeError: Cannot read property 'a' of undefined
 
 // part 2
-// still use 'function' keyword but we're not giving it a named identifier
-// setTimeout(function() {
-//   console.log('3...2...1... blastoff!')
-// }, 1000)
+// let print = function() {
+//   this.a = 50;
+//   console.log('this.a', this.a);
+// }
+
+// print(); // Uncaught TypeError: Cannot read property 'a' of undefined
 
 // part 3
-// setTimeout(()=> {
-//   console.log('3...2...1... blastoff!')
-// }, 1000)
-
-// part 4
-const blastoff = () => {
-  console.log('3...2...1... blastoff!')
+let arrowPrint = () => {
+  console.log('this.a in arrowPrint', this.a) // this.a = 25
 }
 
-blastoff()
+arrowPrint()
+
+// part 4
+// function outerFunction() {
+//   this.a = 25;
+//   let innerFunction = () => {
+//     console.log(this); // does not create its own this
+//   }
+// }
+
+// outerFunction() // Uncaught TypeError: Cannot read property 'a' of undefined
+
+
+

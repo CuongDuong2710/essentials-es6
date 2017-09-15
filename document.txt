@@ -188,6 +188,12 @@ Why, that’s a …spread operator.
 :)
 
 
+============================================
+Lecture 24
+
+This 'preset' automatically enable something called strict mode on the browser.
+Strict mode allow just throw more code errors that might not be able to be supported on every single browser.
+
 
 
 
