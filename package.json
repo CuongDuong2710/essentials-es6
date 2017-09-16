@@ -7,6 +7,11 @@
     "build": "webpack",
     "start": "webpack-dev-server"
   },
+  "babel": {
+    "presets": [
+      "es2015", "react"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
