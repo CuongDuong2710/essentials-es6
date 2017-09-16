@@ -1,5 +1,4 @@
 class Entity {
-  //ES6 will throw a syntax error if a class has more than one constructor. 
   constructor(name, height) {
     this.name = name
     this.height = height
@@ -10,5 +9,7 @@ class Entity {
   }
 }
   
-let Merry = new Entity("Merry", 4.6)
-Merry.greet()
+// let Merry = new Entity("Merry", 4.6)
+// Merry.greet()
+
+export default Entity

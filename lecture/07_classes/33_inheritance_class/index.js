@@ -1,4 +1,3 @@
-// import
 import Entity from './entity'
 
 class Hobbit extends Entity {
@@ -6,7 +5,7 @@ class Hobbit extends Entity {
     super(name, height)
   }
 
-  // override
+  // overide
   greet() {
     console.log(`Hello! I'm ${this.name} from the Shire!`)
   }
