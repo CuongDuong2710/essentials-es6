@@ -1,3 +1,5 @@
+http://davidtkatz.com/#/email_submit
+
 node -v
 npm -v
 mkdir es6
@@ -273,6 +275,24 @@ Stay classy coders.
 Lecture 35 - JSX in ES6
 
 npm install react-dom react babel-preset-react --save-dev
+
+Overview: Extending Upon ES6 With React
+Section 8, Lecture 37
+
+Overview: Extending Upon ES6 With React
+
+Congratulations on finishing this final coding section on extending upon es6 with React. Give yourself a pat on the back!
+
+Let’s take a moment to review the important concepts we just discussed:
+
+    React is a very popular JavaScript framework supported by Facebook that allows for web application development in es6.
+
+    JSX adds XML syntax to JavaScript and allows for rendering elements and components onto a web application.
+
+    A promise handles the eventual result of an operation and determines if it returns a success or failure.
+
+Overall, I hope you reacted to this section positively, and you discovered new and exciting concepts! We’ve covered the essentials and basics of es6, but so much more lies ahead to discover in the realm of JavaScript! And that’s a promise.
+
 
 
 
